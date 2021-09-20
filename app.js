@@ -4,7 +4,7 @@ const express = require("express");
 const errorHandler = require("errorhandler");
 const app = express();
 const path = require("path");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const logger = require("morgan");
@@ -108,5 +108,5 @@ app.get("/project/:uid", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port || 5000}`);
 });
