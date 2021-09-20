@@ -108,5 +108,5 @@ app.get("/project/:uid", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port || 5000}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
