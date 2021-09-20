@@ -6,7 +6,8 @@
     "backend:development": "nodemon app.js",
     "frontend:build": "webpack --progress --config webpack.config.build.js",
     "frontend:development": "webpack serve --progress --config webpack.config.development.js",
-    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
+    "start": "node app.js",
+    "both": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
     "build": "webpack --progress --config webpack.config.build.js"
   },
   "dependencies": {
