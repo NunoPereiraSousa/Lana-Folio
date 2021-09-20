@@ -1,0 +1,163 @@
+.home {
+}
+
+.home__wrapper {
+}
+
+.home__intro {
+  position: relative;
+  padding: 0 6rem;
+
+  @include media("<=tablet") {
+    padding: 0 4rem;
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem;
+  }
+
+  @include media("<phone") {
+    height: 100vh;
+  }
+}
+
+.home__intro__title {
+  @extend %title-220;
+
+  line-height: 0.8;
+  padding: 6.5rem 0 10rem 0;
+
+  @include media("<=tablet") {
+    line-height: 1;
+    padding-top: 8rem;
+  }
+
+  @include media("<phone") {
+    padding-bottom: 4rem;
+    padding-top: 8rem;
+  }
+
+  div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
+
+.home__intro__label {
+  @extend %description-20;
+
+  line-height: 1.2;
+  text-transform: none;
+  width: 35.4rem;
+
+  @include media("<phone") {
+    line-height: 1.4;
+    width: auto;
+  }
+
+  div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
+
+.home__intro__subheader {
+  @extend %title-220;
+
+  line-height: 0.8;
+  margin-left: auto;
+  text-align: right;
+  width: 117rem;
+
+  @include media("<=tablet") {
+    line-height: 1;
+    margin: 6rem 0 6rem auto;
+    width: 60%;
+  }
+
+  @include media("<phone") {
+    font-family: $font-montreal;
+    margin-top: 4rem;
+    width: 24.8rem;
+  }
+
+  div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
+
+.home__intro__media {
+  height: 77.7rem;
+  position: relative;
+  width: 59.25rem;
+  left: 43.6rem;
+  bottom: 11rem;
+
+  @include media("<=tablet") {
+    height: 52.6rem;
+    left: auto;
+    width: 40rem;
+  }
+
+  @include media("<phone") {
+    bottom: 9rem;
+    height: 29.2rem;
+    width: 18rem;
+  }
+}
+
+.home__intro__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+  opacity: 0;
+}
+
+.home__intro__desc {
+  bottom: 30.2rem;
+  left: 117.9rem;
+  position: absolute;
+  width: 45.4rem;
+
+  @include media("<=tablet") {
+    bottom: 20.2rem;
+    margin-left: auto;
+    right: 4rem;
+    width: 26%;
+  }
+
+  @include media("<phone") {
+    bottom: auto;
+    line-height: 1.4;
+    left: 2rem;
+    margin-left: 0;
+    position: static;
+    transform: translateY(-6rem);
+    text-transform: none;
+    width: auto;
+  }
+}
+
+.home__info {
+  height: 100%;
+}
+
+.home__intro__info {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.home__intro__info__label {
+  bottom: 4rem;
+  left: 6rem;
+  position: absolute;
+
+  @include media("<phone") {
+    display: none;
+  }
+}

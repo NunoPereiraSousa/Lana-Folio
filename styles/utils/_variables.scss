@@ -1,0 +1,31 @@
+$color-black: #000000;
+$color-cod-grey: #1a1a1a;
+$color-tundora: #484848;
+$color-pampas: #fcfbfa;
+$color-white: #ffffff;
+$color-snowy-mint: #dcffe3;
+$color-double-pearl-lusta: #fce2c9;
+$color-french-pass: #b5e1ff;
+
+$gradient: linear-gradient(
+  94deg,
+  $color-snowy-mint 0%,
+  $color-double-pearl-lusta 37%,
+  $color-double-pearl-lusta 59%,
+  $color-french-pass 90%
+);
+
+$font-montreal: "Montreal";
+$font-neue-montreal: "Neue Montreal";
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+$z-indexes: (
+  "noscript",
+  "canvas",
+  "preloader",
+  "info",
+  "navigation",
+  "noise",
+  "content"
+);

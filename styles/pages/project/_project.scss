@@ -1,0 +1,35 @@
+.project {
+}
+
+.project__wrapper {
+}
+
+.project__intro {
+}
+
+.project__intro__label {
+  padding-top: 28.6rem;
+  text-align: center;
+
+  @include media("<=tablet") {
+    padding-top: 20.6rem;
+  }
+
+  @include media("<phone") {
+    padding-top: 14.6rem;
+    text-transform: capitalize;
+  }
+}
+
+.project__intro__title {
+  @extend %title-140;
+
+  font-weight: 100;
+  margin: 6rem 0 20rem;
+  text-align: center;
+
+  @include media("<phone") {
+    line-height: 1.2;
+    margin: 3rem 0 14rem;
+  }
+}

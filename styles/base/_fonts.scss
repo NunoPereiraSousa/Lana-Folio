@@ -1,0 +1,37 @@
+/* FONT Montreal */
+@font-face {
+  font-family: $font-montreal;
+  src: url("../fonts/MontrealLight.woff2") format("woff2"),
+    url("../fonts/MontrealLight.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FONT NEUE Montreal */
+@font-face {
+  font-family: $font-neue-montreal;
+  src: url("../fonts/neue-montreal-light.woff2") format("woff2"),
+    url("../fonts/neue-montreal-light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-neue-montreal;
+  src: url("../fonts/NeueMontrealRegular.woff2") format("woff2"),
+    url("../fonts/NeueMontrealRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-neue-montreal;
+  src: url("../fonts/NeueMontrealMedium.woff2") format("woff2"),
+    url("../fonts/NeueMontrealMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

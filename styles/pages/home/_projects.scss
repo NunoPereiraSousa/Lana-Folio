@@ -1,0 +1,109 @@
+.home__projects {
+  margin-top: 32rem;
+
+  @include media("<phone") {
+    margin-top: 16rem;
+  }
+}
+
+.home__projects__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home__projects__header__section {
+  align-items: center;
+  display: flex;
+}
+
+.home__projects__header__number {
+  margin-right: 12.2rem;
+
+  @include media("<phone") {
+    margin-right: 2.4rem;
+  }
+}
+
+.home__projects__header__name {
+  @include media("<phone") {
+    text-decoration: underline $color-tundora;
+    text-transform: uppercase;
+  }
+}
+
+.home__projects__header__title {
+  @extend %title-60;
+
+  margin: 5rem 0 20rem;
+  width: 52.5rem;
+
+  @include media("<phone") {
+    margin: 3rem auto 5.6rem;
+    width: auto;
+  }
+}
+
+.home__projects__list {
+}
+
+.home__projects__list__link {
+  display: block;
+  padding: 12rem 0;
+  position: relative;
+  text-align: center;
+
+  @include media("<phone") {
+    padding: 3rem 0;
+  }
+
+  &:first-child:hover .home__projects__list__title {
+    color: rgba($color: #ffbf6c, $alpha: 1);
+  }
+
+  &:nth-child(2):hover .home__projects__list__title {
+    color: rgba($color: #db718e, $alpha: 1);
+  }
+
+  &:nth-child(3):hover .home__projects__list__title {
+    color: rgba($color: #ba98fd, $alpha: 1);
+  }
+
+  &:nth-child(4):hover .home__projects__list__title {
+    color: rgba($color: #8bb8a8, $alpha: 1);
+  }
+}
+
+.home__projects__list__link__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: rgba($color: $color-tundora, $alpha: 0.6);
+
+  @include media("<phone") {
+    height: 1px;
+    margin-bottom: 3rem;
+  }
+}
+
+.home__projects__list__label {
+  @include media("<phone") {
+    font-size: 1.4rem;
+  }
+}
+
+.home__projects__list__title {
+  @extend %title-140;
+
+  margin: 5rem 0;
+  transition: all 0.4s $ease-out-expo;
+
+  @include media("<phone") {
+    font-family: $font-montreal;
+    margin: 3.1rem 0;
+  }
+}

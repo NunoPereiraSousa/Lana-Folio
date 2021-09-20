@@ -1,0 +1,12 @@
+.noise {
+  &::before {
+    @extend %cover;
+
+    background-image: url("../assets/noise.gif");
+    content: "";
+    pointer-events: none;
+    position: fixed;
+    opacity: 0;
+    z-index: 88;
+  }
+}

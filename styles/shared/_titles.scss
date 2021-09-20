@@ -1,0 +1,61 @@
+%title-60 {
+  font-family: $font-montreal;
+  font-size: 6rem;
+  line-height: 1;
+
+  @include media("<phone") {
+    font-size: 2.2rem;
+  }
+}
+
+%title-80 {
+  font-family: $font-montreal;
+  font-size: 8rem;
+  font-weight: 100;
+  line-height: 1;
+
+  @include media("<=tablet") {
+    font-size: 5rem;
+  }
+
+  @include media("<phone") {
+    font-size: 3.4rem;
+  }
+
+  @include media("<smallPhone") {
+    font-size: 3.2rem;
+  }
+}
+
+%title-140 {
+  font-family: $font-montreal;
+  font-size: 14rem;
+  line-height: 1;
+
+  @include media("<=tablet") {
+    font-size: 8rem;
+  }
+
+  @include media("<phone") {
+    font-size: 4rem;
+  }
+}
+
+%title-220 {
+  font-family: "Montreal";
+  font-size: 22rem;
+  font-weight: 100;
+  line-height: 1;
+
+  @include media("<=tablet") {
+    font-size: 8rem;
+  }
+
+  @include media("<phone") {
+    font-size: 4.4rem;
+  }
+
+  @include media("<smallPhone") {
+    font-size: 3.2rem;
+  }
+}

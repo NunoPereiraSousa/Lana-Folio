@@ -1,0 +1,89 @@
+.preloader {
+  @extend %cover;
+  @extend %center;
+
+  background-color: $color-pampas;
+  color: $color-cod-grey;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  text-transform: uppercase;
+  width: 100vw;
+  z-index: z("preloader");
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  // display: none;
+}
+
+.preloader__title {
+  font-size: 1.6rem;
+  margin-right: 41.8rem;
+
+  // span {
+  //   display: inline-block;
+
+  //   overflow: hidden;
+  // }
+
+  // span span {
+  //   font-size: 1.6rem;
+  // }
+
+  @include media("<=tablet") {
+    margin: 0;
+  }
+}
+
+.preloader__loader {
+  width: 84.8rem;
+
+  @include media("<=tablet") {
+    padding: 0 6rem;
+    width: calc(100% - (6rem * 2));
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem;
+    width: calc(100% - (2rem * 2));
+  }
+}
+
+.preloader__loader__label {
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+  opacity: 0.5;
+  // span {
+  //   display: inline-block;
+
+  //   overflow: hidden;
+  // }
+
+  // span span {
+  //   font-size: 1.6rem;
+  // }
+}
+
+.preloader__loader__line {
+  background-color: $color-cod-grey;
+  height: 2px;
+  width: 1%;
+
+  @include media("<phone") {
+    height: 1px;
+  }
+}
+
+.preloader__loader__counter {
+  font-weight: 500;
+  margin-top: 1.4rem;
+  text-align: right;
+  overflow: hidden;
+}
+
+.preloader__loader__counter__text {
+  display: inline-block;
+}

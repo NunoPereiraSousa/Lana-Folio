@@ -1,0 +1,150 @@
+.about {
+}
+
+.about__wrapper {
+}
+
+.about__info {
+  height: 100vh;
+  position: relative;
+}
+
+.about__info__title {
+  @extend %title-80;
+
+  font-family: $font-neue-montreal;
+  font-weight: 400;
+  position: absolute;
+  left: 6rem;
+  bottom: 6rem;
+  width: 144rem;
+
+  @include media("<=tablet") {
+    bottom: 50%;
+    left: 4rem;
+    transform: translateY(50%);
+    width: 80%;
+    line-height: 1.2;
+  }
+
+  @include media("<phone") {
+    left: 50%;
+    line-height: 1;
+    transform: translate(-50%, 10%);
+    text-transform: none;
+    width: 90%;
+  }
+}
+
+.about__intro__info {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.about__intro__info__label {
+  bottom: 4rem;
+  position: absolute;
+  right: 6rem;
+
+  @include media("<phone") {
+    font-size: 1.4rem;
+    right: 2rem;
+  }
+}
+
+.about__info__contacts {
+  padding: 6.5rem 6rem 0;
+
+  @include media("<=tablet") {
+    padding: 4rem;
+  }
+
+  @include media("<phone") {
+    bottom: 4rem;
+    left: 2rem;
+    font-size: 1.4rem;
+    padding: 0;
+    position: absolute;
+  }
+}
+
+.about__info__contacts__label {
+  display: block;
+  text-transform: none;
+  width: fit-content;
+}
+
+.about__timeline {
+  margin-top: 26rem;
+  padding: 0 6rem;
+
+  @include media("<phone") {
+    margin-top: 20rem;
+    padding: 0 2rem;
+  }
+}
+
+.about__timeline__item {
+  display: flex;
+  margin-bottom: 20rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    margin-bottom: 13rem;
+  }
+
+  @include media("<phone") {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+}
+
+.about__timeline__title {
+  @extend %title-60;
+
+  font-family: $font-neue-montreal;
+  letter-spacing: 1px;
+  margin-right: 31rem;
+  width: 71.6rem;
+
+  @include media("<=tablet") {
+    font-size: 4rem;
+  }
+
+  @include media("<phone") {
+    width: 100%;
+  }
+}
+
+.about__timeline__label {
+  @extend %description-30;
+
+  &:first-child {
+    background-color: $color-pampas;
+    color: $color-cod-grey;
+    margin-bottom: 2.6rem;
+    padding: 0 1rem;
+    width: fit-content;
+
+    @include media("<=tablet") {
+      margin-top: 1.5rem;
+    }
+
+    @include media("<phone") {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      padding: 0 0.6rem;
+    }
+  }
+
+  &:last-child {
+    text-transform: none;
+    width: 60rem;
+
+    @include media("<=tablet") {
+      font-size: 2.5rem;
+      width: 100%;
+    }
+  }
+}

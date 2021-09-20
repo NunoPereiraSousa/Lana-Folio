@@ -1,0 +1,75 @@
+.project__list {
+  padding: 0 6rem;
+
+  @include media("<=tablet") {
+    padding: 0 4rem;
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem;
+  }
+}
+
+.project__list__item {
+  // border-top: 1.5px solid rgba($color: $color-tundora, $alpha: 0.4);
+  margin-top: 16rem;
+
+  @include media("<=tablet") {
+    margin-top: 10rem;
+  }
+
+  @include media("<phone") {
+    margin-top: 3rem;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.project__list__item__header {
+  align-items: center;
+  display: flex;
+  padding: 4.2rem 0 11.6rem;
+
+  @include media("<=tablet") {
+    padding: 3rem 0 4rem;
+  }
+
+  @include media("<phone") {
+    padding: 4.4rem 0 3rem;
+  }
+}
+
+.project__list__item__label {
+  &:first-child {
+    margin-right: 11.6rem;
+
+    @include media("<=tablet") {
+      margin-right: 6rem;
+    }
+
+    @include media("<phone") {
+      margin-right: 3rem;
+      text-transform: none;
+    }
+  }
+
+  &:last-child {
+    @include media("<phone") {
+      text-transform: none;
+    }
+  }
+}
+
+.project__list__line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: rgba($color: $color-cod-grey, $alpha: 0.4);
+
+  @include media("<phone") {
+    height: 1px;
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,35 @@
+extends ../base.pug
+
+block variables
+  - var template = 'about'
+
+block content
+  div(data-barba="wrapper")
+    div#main-wrapper.main-wrapper(data-barba="container" data-barba-namespace="about")
+
+      div#scrollable.scrollable
+        .content#content(data-template=template)
+          .about
+            .about__wrapper
+              .about__info
+                .about__intro__info
+                  .about__intro__info__label(data-animation="title")=about.data.scroll_label 
+
+                  .about__info__contacts
+                    a.about__info__contacts__label(href=about.data.email)=about.data.email
+                    a.about__info__contacts__label(href=about.data.phone)=about.data.phone
+                    a.about__info__contacts__label(href=about.data.linkedin) LinkedIn
+                    a.about__info__contacts__label(href=about.data.instagram) Instagram
+                
+                h2.about__info__title(data-animation="paragraph")=about.data.title
+
+              section.about__timeline
+                each timeline in about.data.timeline
+                  .about__timeline__item
+                    h2.about__timeline__title(data-animation="paragraph")=timeline.timeline_title
+
+                    div 
+                      p.about__timeline__label.date(data-animation="rect")=timeline.timeline_date
+                      p.about__timeline__label(data-animation="paragraph")=timeline.timeline_label
+
+              include ../partials/footer

@@ -1,0 +1,95 @@
+.footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 16.6rem 8rem 4rem;
+
+  @include media("<=tablet") {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    margin: 16.6rem 4rem 4rem;
+    row-gap: 3rem;
+  }
+
+  @include media("<phone") {
+    font-size: 1.4rem;
+    margin: 8rem 2rem 4.5rem;
+    row-gap: 4rem;
+  }
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info__label {
+  transition: all $ease-out-expo 0.4s;
+
+  &:not(:first-child):hover {
+    opacity: 0.5 !important;
+  }
+}
+
+.footer__links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__links__label {
+  cursor: pointer;
+  transition: all $ease-out-expo 0.4s;
+
+  &:hover {
+    opacity: 0.5 !important;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 2rem;
+
+    @include media("<=tablet") {
+      margin-right: 1.5rem;
+    }
+
+    @include media("<phone") {
+      margin-right: 1rem;
+      line-height: 2;
+    }
+  }
+
+  &:nth-child(2) {
+    @include media("<phone") {
+      margin-right: 0;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__links__button {
+  cursor: pointer;
+  transition: all $ease-out-expo 0.4s;
+
+  &:hover {
+    opacity: 0.5 !important;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 2rem;
+
+    @include media("<=tablet") {
+      margin-right: 1.5rem;
+    }
+
+    @include media("<phone") {
+      margin-right: 1rem;
+      line-height: 2;
+    }
+  }
+}

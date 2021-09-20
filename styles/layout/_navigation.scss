@@ -1,0 +1,63 @@
+.navigation {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding: 6.5rem 6rem 0;
+  pointer-events: none;
+  position: fixed;
+  text-transform: none;
+  z-index: z("navigation");
+  width: 100%;
+
+  @include media("<=tablet") {
+    padding: 4rem;
+  }
+
+  @include media("<phone") {
+    font-size: 1.4rem;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+}
+
+.navigation__link {
+  pointer-events: auto;
+  transition: all $ease-out-expo 0.4s;
+  margin-right: 6rem;
+
+  @include media("<=tablet") {
+    margin-right: 4rem;
+  }
+
+  @include media("<phone") {
+    margin-right: 2rem;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
+
+.navigation__button {
+  background-color: $color-pampas;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1rem;
+  transition: all 0.4s;
+  width: 1rem;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  @include media("<phone") {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+}

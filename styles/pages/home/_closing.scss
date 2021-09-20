@@ -1,0 +1,30 @@
+.home__closing {
+  margin-top: 32rem;
+
+  @include media("<phone") {
+    margin-top: 16rem;
+  }
+}
+
+.home__closing__media {
+  height: 208.7rem;
+  margin: auto;
+  position: relative;
+  width: 171.5rem;
+
+  @include media("<=tablet") {
+    height: 90vh;
+    width: 100%;
+  }
+
+  @include media("<phone") {
+    height: 52.4rem;
+  }
+}
+
+.home__closing__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+  opacity: 0;
+}

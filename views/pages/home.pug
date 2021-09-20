@@ -1,0 +1,69 @@
+extends ../base.pug
+
+block variables
+  - var template = "home"
+
+block content
+  div(data-barba="wrapper")
+    div#main-wrapper.main-wrapper(data-barba="container" data-barba-namespace="home")
+
+      canvas.webgl
+
+      div#scrollable.scrollable
+        .content#content(data-template=template)
+          .home
+            .home__wrapper
+              .home__info
+                .home__intro__info
+                  p.home__intro__info__label(data-animation="title")=home.data.scroll_label
+
+                .home__intro
+                  h1.home__intro__title(data-animation="title")=home.data.title
+                  p.home__intro__label(data-animation="paragraph")=home.data.desc
+                  h1.home__intro__subheader(data-animation="title")=home.data.subheader
+
+                  figure.home__intro__media
+                    img.home__intro__media__image(src=home.data.image.url alt=home.data.image.alt crossorigin="anonymous")
+
+                  p.home__intro__desc(data-animation="paragraph")=home.data.desc2
+
+                each section in home.data.body
+                  if section.slice_type == "about"
+                    section.home__about
+                      .home__about__header
+                        .home__about__header__section
+                          p.home__about__header__number(data-animation="paragraph")=section.primary.number
+                          p.home__about__header__name(data-animation="paragraph")=section.primary.title1
+
+                        h3.home__about__header__title(data-animation="paragraph")=section.primary.subtitle
+                      
+                      .home__about__content
+                        .home__about__content__desc1(data-animation="paragraph")=section.primary.subtitle_desc
+
+                        figure.home__about__media
+                          img.home__about__media__image(src=section.primary.image1.url alt=section.primary.image1.alt crossorigin="anonymous")
+
+                        .home__about__content__desc2(data-animation="paragraph")=section.primary.desc21
+                        .home__about__content__desc3(data-animation="paragraph")=section.primary.desc3
+
+                  if section.slice_type == "projects"
+                    section.home__projects
+                      .home__projects__header
+                        .home__projects__header__section
+                          p.home__projects__header__number(data-animation="title")=section.primary.number
+                          p.home__projects__header__name(data-animation="title")=section.primary.projects_title
+                        
+                        .home__projects__header__title(data-animation="paragraph")=section.primary.subtitle
+
+                      each project in section.items
+                        .home__projects__list
+                          a.home__projects__list__link(href=Link(project.link))
+                            .home__projects__list__link__line(data-animation="line")
+                            p.home__projects__list__label(data-animation="paragraph")=project.date
+                            h1.home__projects__list__title(data-animation="title")=project.project_title
+                            p.home__projects__list__label(data-animation="paragraph")=project.project_label
+                  
+                  if section.slice_type == "image"
+                    section.home__closing
+                      figure.home__closing__media
+                        img.home__closing__media__image(src=section.primary.profile_img.url alt=section.primary.profile_img.alt crossorigin="anonymous")

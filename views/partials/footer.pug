@@ -1,0 +1,10 @@
+footer.footer
+  p.footer__info__label(data-animation="paragraph")=footer.data.label
+
+  .footer__links
+    each link, index in footer.data.links
+      a.footer__links__label(href=link.email.link_type data-animation="paragraph")=link.link_label
+        span /&nbsp;
+        
+    button.footer__links__button(data-animation="paragraph" onclick="window.scroll(0,0)")=footer.data.button
+        

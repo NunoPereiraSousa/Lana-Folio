@@ -1,0 +1,25 @@
+extends ../base.pug
+
+block variables
+  - var template = "project"
+
+block content
+  div(data-barba="wrapper")
+    div#main-wrapper.main-wrapper(data-barba="container" data-barba-namespace="about")
+      div#scrollable.scrollable
+        .content#content(data-template=template)
+          .project
+            .project__wrapper
+              .project__intro
+                p.project__intro__label(data-animation="paragraph")=project.data.label
+                h1.project__intro__title(data-animation="title")=project.data.title 
+
+                section.project__list
+                  each section in project.data.zones
+                    .project__list__item
+                      .project__list__line
+                      .project__list__item__header
+                        p.project__list__item__label(data-animation="paragraph")=section.number
+                        p.project__list__item__label(data-animation="paragraph")=section.zone_title
+                      
+                      p.project__list__item__label(data-animation="paragraph")=section.zone_text

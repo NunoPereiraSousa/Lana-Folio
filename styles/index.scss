@@ -1,0 +1,31 @@
+@import "./base/_reset";
+
+@import "./utils/_variables";
+@import "./utils/_functions";
+@import "./utils/_mixins";
+@import "./utils/_responsive";
+@import "./utils/_vendors";
+@import "./utils/_animations";
+
+@import "./shared/_descriptions";
+@import "./shared/_titles";
+
+@import "./base/_fonts";
+@import "./base/_base";
+
+@import "./components/_preloader";
+@import "./components/_canvas";
+
+@import "./layout/_noise";
+@import "./layout/_navigation";
+@import "./layout/_footer";
+
+@import "./pages/home/_hero";
+@import "./pages/home/_about";
+@import "./pages/home/_projects";
+@import "./pages/home/_closing";
+
+@import "./pages/about/_about";
+
+@import "./pages/project/_project";
+@import "./pages/project/_list";

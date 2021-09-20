@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  // @extend %cover;
+
+  font-size: calc(100vw / 1920 * 10);
+  -moz-osx-font-smoothing: grayscale;
+  // overflow: hidden;
+  // position: fixed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  // scroll-behavior: smooth;
+  width: 100%;
+
+  @include media("<=tablet") {
+    font-size: 10px;
+  }
+}
+
+body {
+  // @extend %cover;
+  @extend %description-16;
+
+  @include media("<=desktop") {
+    font-size: 16px;
+  }
+
+  @include media("<phone") {
+    font-size: 15px;
+  }
+
+  // background: $gradient;
+  background-color: $color-cod-grey;
+  color: $color-pampas;
+  font-family: $font-neue-montreal;
+  text-transform: uppercase;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  // @extend %cover;
+  height: 100%;
+}
+
+[data-animation="paragraph"],
+[data-animation="title"] {
+  div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
